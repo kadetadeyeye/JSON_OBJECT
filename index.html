@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON SANDBOXES</title>
+</head>
+<body>
+    <ul id="people"></ul>
+    <script>
+        /*
+        var person = {
+            name : "Brad",
+            age : 35,
+            address:{
+                street : "10 Babatunde street",
+                city: "Lagos"
+            },
+            childres: ["Tello", "Nelson", "Britnay"]
+        }
+        //person = JSON.stringify(person);
+        //console.log(peron.age);
+
+
+        //Array of Objects
+        var people = [
+            {
+                name : "Brad",
+                age: 34,
+            },
+            {
+                name: "John",
+                age: 40
+            },
+            {
+                name: "Sam",
+                age: 25
+            }
+        ]
+        //  console.log(people[1].age);
+        var output = '';
+        for(var i = 0; i<people.length; i++){
+            output += '<li>'+people[i].name+'<li>'
+        }
+        document.getElementById('people').innerHTML = output;
+        */
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+         console.log(xhttp.responseText);
+      
+    }
+};
+xhttp.open("GET", "people.json", true);
+xhttp.send();
+
+        
+    </script>
+</body>
+</html>
